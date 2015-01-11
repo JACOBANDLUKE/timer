@@ -30,7 +30,10 @@ public class PanTimer extends JPanel { // panel definition
         @Override
         public void actionPerformed(ActionEvent evt) {
             nCount--;
-             panOut.UpdateLabel(nCount);
+             panOut.UpdateLabel(nCount); 
+             if (nCount == 0){
+                 timer.stop();
+             }
         }
     };
 }
